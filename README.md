@@ -21,3 +21,4 @@ Additional Notes:
 - All required files are included and orgainzed per the assignment instructions
 - The Flowchart and Block Diagram were created using draw.io and exported as PNG's
 - GitHub Repo is public and I have invited the collaborators as per Instruction
+- Files in docs are not final and are just a draft, the files in the github are the final product, expect changes.
