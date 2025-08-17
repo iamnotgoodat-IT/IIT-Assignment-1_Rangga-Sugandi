@@ -1,1 +1,14 @@
-The illustration of the flowchart is attached to the file named "PetFeeder_Flowchart FIN.drawio.png" in the same folder
+Decision Logic:
+- The system first checks the current time against the scheduled feeding times.
+- If it is a feeding time, the system checks the food capacity in the container: 
+    (If food is above 20% of its maximum capacity, food is dispensed normally)
+    (If food is between 5% and 20% of its maximum capacity, food is still dispensed, but a low-food warning is sent to the staff.)
+    (If food is below 5% if its maximum capacity, the system sends a critical alert and ceases all operations until manually restarted by staff.)
+- Before dispensing, the hatch sensor is checked to ensure the hatch can open. If the hatch is jammed, the system alerts staff and ceases operations.
+- Food is dispensed by activating the motor. After dispensing, the system waits 15 minutes  and checks the bowl weight to confirm whether the pet has eaten.
+
+
+Error Detection Logic:
+- If the hatch fails to open during dispensing, the system sends a jam alert and shuts down.
+- If the bowl weight has not decreased by atleast 50% in 15 minutes, the system sends an alert that the pet has not eaten and ceases operations.
+- If the food capacity sensor detects less than 5% food in the container, the syste, sends an "empty bin" alert and stops all functions.
