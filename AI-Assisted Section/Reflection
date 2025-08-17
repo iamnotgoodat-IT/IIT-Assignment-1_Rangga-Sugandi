@@ -1,10 +1,18 @@
 (Originally written in google docs, pasted here just to make sure)
 
-	As per the instructions to Part 3 of the IIT assignment, I prompted Copilot AI with the two given queries: “Refine your logic or Word Code” and “Explore real-world implementation.” I have documented the aforementioned interactions in detail via my github repository under “AI-Assisted Section.”
+	As per the instructions to Part 3 of the IIT assignment, I prompted Copilot AI with the two given queries: “Refine your logic or Word Code” and “Explore real-world implementation.” 
+	I have documented the aforementioned interactions in detail via my github repository under “AI-Assisted Section.”
 
-	First of all, I asked the AI how it would improve my word code. I gave it access to my Github repository and pasted the code directly into the prompt. After reviewing the changes Copilot made, I found them quite helpful. To highlight, it made the code neater and easier to read by sectioning it properly, applying consistent formatting, and adding colour values to different commands. What stood out was that it highlighted potential issues like sensor failure without changing the logic itself as it knows it would have strayed too far from its original purpose. This helped me identify a flaw I had not considered, which I have now included in my test cases.
+	First of all, I asked the AI how it would improve my word code. I gave it access to my Github repository and pasted the code directly into the prompt. 
+	After reviewing the changes Copilot made, I found them quite helpful. 
+	To highlight, it made the code neater and easier to read by sectioning it properly, applying consistent formatting, and adding colour values to different commands. 
+	What stood out was that it highlighted potential issues like sensor failure without changing the logic itself as it knows it would have strayed too far from its original purpose. 
+	This helped me identify a flaw I had not considered, which I have now included in my test cases.
 
-	Next, I asked how the system could be implemented in real life. To answer this, Copilot focused on two options: using Arduino or a Raspberry Pi. It compared both and concluded that Arduino would be the more cost-effective choice. This not only showed its ability to think through real-world scenarios but also gave me a rough idea of how I could build the system myself.
+	Next, I asked how the system could be implemented in real life. 
+	To answer this, Copilot focused on two options: using Arduino or a Raspberry Pi. 
+	It compared both and concluded that Arduino would be the more cost-effective choice. 
+	This not only showed its ability to think through real-world scenarios but also gave me a rough idea of how I could build the system myself.
 
 	Overall, Copilot’s input helped me improve both the structure of my code and my understanding of how it could work in practice.
 
