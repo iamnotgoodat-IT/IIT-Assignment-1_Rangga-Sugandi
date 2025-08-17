@@ -1,1 +1,31 @@
+Testing and Refining The Solution
+
+Scenario 1 - Pet eats as expected
+- At 09:00 the feeder checks and sees there’s 80% of food in the bin. Hatch is opened, motor runs, and food is dispensed.
+- After 15 minutes, the bowl weight drops by more than half so the system assumes the pet ate.
+- Refinement: Works exactly as intended, no refinement necessary.
+
+Scenario 2 - Pet does not eat
+- Food is dispensed normally, but the system notices the bowl hasn’t changed weight over 50% in 15 minutes.
+- System sends an alert saying the food hasn’t been eaten and shuts down until restarted.
+- Refinement: Good but maybe the alert should suggest pets may need medical attention.
+
+Scenario 3 - Food bin is empty
+- At feeding time, the food level in the bin is only 4%.
+- The feeder does not dispense, alerts staff that food is empty, and ceases operations.
+- Refinement: Could improve by repeating the alert periodically until resolved.
+
+Scenario 4 - Hatch jammed
+- Food level is sufficient, but the hatch sensor shows it won’t open.
+- The motor attempts to run but hatch is stuck, so an alert is sent and the system shuts down.
+- Refinement: System could retry opening hatch before fully shutting down.
+
+Scenario 5 - Low food warning
+- At feeding time, the food capacity is 15%.
+- System dispenses food but sends a warning to staff to refill the feeder.
+- Refinement: Works as intended, no refinements needed.
+
+Scenario 6 - Sensor error
+- Food capacity sensor fails to return a value, leading to misreads (defaulting to 0 or stale value).
+- Refinement: System should explicitly alert staff if a sensor itself fails.
 
