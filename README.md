@@ -11,11 +11,11 @@ In this repo, I have submitted the necessities for Part 1, aswell as Part 2 (wel
 
 
 Structure:
-Step1_Analysis        : Defines the problems, assumptions, as well as the block diagram
-Step2_Data Description: Organized and described data as well as a table consisting of the variables.
-Step3_Logic           : Includes the logic of the system aswell as a visual flowchart to help illustrate
-Step4_WordCode        : A simple string of logic written in pseudo-code and made as similar as possible to python
-Step5_Testing         : Sample scenarios and refinements
+- Step1_Analysis        : Defines the problems, assumptions, as well as the block diagram
+- Step2_Data Description: Organized and described data as well as a table consisting of the variables.
+- Step3_Logic           : Includes the logic of the system aswell as a visual flowchart to help illustrate
+- Step4_WordCode        : A simple string of logic written in pseudo-code and made as similar as possible to python
+- Step5_Testing         : Sample scenarios and refinements
 
 
 Additional Notes:
