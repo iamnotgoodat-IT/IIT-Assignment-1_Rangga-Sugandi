@@ -1,1 +1,37 @@
+Step 1: Understand and Define the Problem (Analyse)
+
+Problem Statement:
+The need to design an automatic pet feeder for cats and dogs that can dispense the food at a set time, monitor if and what amount of food has been consumed, and also alert staff if an issue arises (machine malfunctioning, pets not eating, and food running low). It needs to be as cost-effective as possible, not wasting money on unnecessary features and must eventually be implemented using servo motors and sensors.
+
+Features:
+- Programmable schedule for at least two fixed feeding times daily.
+- Monitoring of food availability in the container and food consumption in the bowl.
+- Automated dispensing of dry food using a motor-controlled mechanism.
+- Alerts staff for key issues like empty container, food not eaten, and if the machine malfunctions (e.g hatch won’t open).
+- A manual restart being intuitive and easy.
+
+Assumptions:
+- Each feeder unit serves one pet bowl to prevent competition and ensure portion accuracy.
+- This whole process is designed for just a singular machine in mind, with the consideration that it will be replicated for the second machine.
+- Only dry food is used to avoid hygiene issues and to simplify design.
+- The shelter has basic connectivity (e.g. Wi-Fi) to send the alerts.
+
+Possible Limitations:
+- Limited storage capacity for food (requires regular refilling by staff).
+- Restricted processing power if the microcontroller itself is low-cost.
+- Alerts dependent on connectivity.
+- Cleanup is manual.
+- The chance of expiry is high if left unattended for too long.
+- Food quality can be inconsistent.
+
+Inputs:
+Feeding schedule, current time, food level sensor, bowl weight sensor, power status.
+
+Outputs:
+Motor activation, Alert messages and notifications.
+
+Block Diagram:
+(To be attached separately)
+
+
 
