@@ -1,1 +1,62 @@
+ABBREVIATIONS:
+Scheduled_Time    = Scheduled Feeding Times
+Current_Time      = Current Time
+Food_Capacity     = Food Capacity in Container (%)
+Bowl_Weight       = Bowl Weight after dispensing (grams)
+MOTOR             = Servo motor control command
+ALERT             = Alert/notification message to staff
+HATCH             = Food hatch sensor state (Boolean, True = Open, False = Closed)
+
+WORD CODE:
+# - INITIAL SETUP - 
+Scheduled_Time       = [09:00, 18:00]    # Scheduled feeding times (fixed)
+LOW_FOOD_WARNING     = 20                # Warning threshold (%)
+LOW_FOOD_STOP        = 5                 # Stop threshold (%)
+CONSUMPTION_DROP     = 50                # % drop in Bowl_Weight considered “eating”
+WAIT_AFTER_FEED      = 15                # Minutes to wait before checking bowl weight
+
+# - MAIN LOOP - 
+while True:
+    Scheduled_Time = get_scheduled_times()
+    Current_Time = read_current_time()
+    
+    if Current_Time in Scheduled_Time:
+        Food_Capacity = read_food_capacity_sensor()
+        
+        if Food_Capacity > LOW_FOOD_WARNING:
+            HATCH = read_hatch_sensor()
+            if HATCH == True:
+                MOTOR.activate_for(3)
+            else:
+                ALERT.send("Hatch jam detected - cannot dispense")
+                cease_operations()
+                break
+                
+        elif LOW_FOOD_WARNING >= Food_Capacity > LOW_FOOD_STOP:
+            ALERT.send("Food is almost empty, remember to refill!")
+            HATCH = read_hatch_sensor()
+            if HATCH == True:
+                MOTOR.activate_for(3)
+            else:
+                ALERT.send("Hatch jam detected - cannot dispense")
+                cease_operations()
+                break
+        
+        elif Food_Capacity <= LOW_FOOD_STOP:
+            ALERT.send("Food is completely empty, please refill immediately!")
+            cease_operations()
+            break
+        
+        wait_minutes(WAIT_AFTER_FEED)
+        Bowl_Weight = read_bowl_weight()
+        
+        if bowl_weight_decreased_by(CONSUMPTION_DROP):
+            continue
+        else:
+            ALERT.send("Food has not been eaten")
+            cease_operations()
+            break
+    else:
+        wait_minutes(1)
+        continue
 
