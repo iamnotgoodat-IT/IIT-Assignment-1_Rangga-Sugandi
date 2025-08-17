@@ -4,10 +4,9 @@ Student : Rangga Sugandi
 
 
 Overview:
-This repository contains my submissions required for Assignment 1 of IIT, focusing on the logic behind designing a low-cost automated pet feeder system. 
+- This repository contains my submissions required for Assignment 1 of IIT, focusing on the logic behind designing a low-cost automated pet feeder system. 
 The solution follows the Integrated Problem-Solving Process and includes analysis, flowchart, word-based coding, and testing.
-
-In this repo, I have submitted the necessities for Part 1, aswell as Part 2 (well this whole github is Part 2)
+- In this repo, I have submitted the necessities for Part 1, aswell as Part 2 (well this whole github is Part 2)
 
 
 Structure:
